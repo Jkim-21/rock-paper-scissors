@@ -12,40 +12,44 @@ function playRound(playerSelection, computerSelection) {
     
     if (playerSelection == "rock") {
         if (computerSelection == "rock") {
-            return ("You draw! Rock ties with Rock")
+            return ("You draw! Rock ties with Rock");
         }
         if (computerSelection == "scissors") {
-            return ("You win! Rock beats Scissors")
+            return ("You win! Rock beats Scissors");
         }
         if (computerSelection == "paper") {
-            return ("You lose! Rock loses against Paper")
+            return ("You lose! Rock loses against Paper");
         }
     }
 
     if (playerSelection == "scissors") {
         if (computerSelection == "rock") {
-            return ("You lose! Scissors loses against Rock")
+            return ("You lose! Scissors loses against Rock");
         }
         if (computerSelection == "scissors") {
-            return ("You tie! Scissors ties with Scissors")
+            return ("You tie! Scissors ties with Scissors");
         }
         if (computerSelection == "paper") {
-            return ("You win! Scissors beats Paper")
+            return ("You win! Scissors beats Paper");
         }
     }
 
     if (playerSelection == "paper") {
         if (computerSelection == "rock") {
-            return ("You win! Paper beats Rock")
+            return ("You win! Paper beats Rock");
         }
         if (computerSelection == "scissors") {
-            return ("You lose! Paper loses against Scissors")
+            return ("You lose! Paper loses against Scissors");
         }
         if (computerSelection == "paper") {
-            return ("You tie! Paper ties with Paper")
+            return ("You tie! Paper ties with Paper");
         }
     }
 }
+
+const playerSelection = "Rock";
+const computerSelection = getComputerChoice();
+console.log(playRound(playerSelection, computerSelection));
 
 
 
