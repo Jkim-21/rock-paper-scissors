@@ -10,7 +10,7 @@ function getComputerChoice() {
 function playRound(playerSelection, computerSelection) {
     let userAnswer = playerSelection.toLowerCase();
     
-    if (playerSelection == "rock") {
+    if (userAnswer == "rock") {
         if (computerSelection == "rock") {
             return ("You draw! Rock ties with Rock");
         }
@@ -22,7 +22,7 @@ function playRound(playerSelection, computerSelection) {
         }
     }
 
-    if (playerSelection == "scissors") {
+    if (userAnswer == "scissors") {
         if (computerSelection == "rock") {
             return ("You lose! Scissors loses against Rock");
         }
@@ -34,7 +34,7 @@ function playRound(playerSelection, computerSelection) {
         }
     }
 
-    if (playerSelection == "paper") {
+    if (userAnswer == "paper") {
         if (computerSelection == "rock") {
             return ("You win! Paper beats Rock");
         }
