@@ -51,7 +51,8 @@ function game() {
     let userScore = 0; 
     let computerScore = 0;
     for (let i = 0; i < 5; i++) {
-        let playerSelection = prompt("Let's play Rock, Paper, Scissors. Enter one of the three options in the game (Rock, Paper, Scissors).", "");
+        let playerSelection = prompt("Let's play Rock, Paper, Scissors. Enter \
+        one of the three options in the game (Rock, Paper, Scissors).", "");
         let computerSelection = getComputerChoice();
         let roundResult = playRound(playerSelection, computerSelection);
         console.log(playRound(playerSelection, computerSelection));
