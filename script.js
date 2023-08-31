@@ -27,7 +27,7 @@ function playRound(playerSelection, computerSelection) {
             return ("You lose! Scissors loses against Rock");
         }
         if (computerSelection == "scissors") {
-            return ("You tie! Scissors ties with Scissors");
+            return ("You draw! Scissors ties with Scissors");
         }
         if (computerSelection == "paper") {
             return ("You win! Scissors beats Paper");
@@ -42,14 +42,39 @@ function playRound(playerSelection, computerSelection) {
             return ("You lose! Paper loses against Scissors");
         }
         if (computerSelection == "paper") {
-            return ("You tie! Paper ties with Paper");
+            return ("You draw! Paper ties with Paper");
         }
     }
 }
 
-const playerSelection = "Rock";
-const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));
+function game() {
+    let userScore = 0; 
+    let computerScore = 0;
+    for (let i = 0; i < 5; i++) {
+        let playerSelection = prompt("Let's play Rock, Paper, Scissors. Enter one of the three options in the game (Rock, Paper, Scissors).", "");
+        let computerSelection = getComputerChoice();
+        let roundResult = playRound(playerSelection, computerSelection);
+        console.log(playRound(playerSelection, computerSelection));
+
+        if (roundResult.includes("You win!")) {
+            userScore += 1;
+        }
+        else if (roundResult.includes("You lose!")) {
+            computerScore += 1;
+        }
+    }
+    if (userScore > computerScore) {
+        console.log("You're the winner of the game! You beat the computer :)")
+    }
+    else if (computerScore > userScore) {
+        console.log("The computer is the winner the game! You lost against computer :(")
+    }
+    else {
+        console.log("um... awkward")
+    }
+}
+
+game();
 
 
 
@@ -63,4 +88,3 @@ console.log(playRound(playerSelection, computerSelection));
 
 
 
-// let rawInput = prompt("Let's play Rock, Paper, Scissors. Enter one of the three options in the game.", "");
